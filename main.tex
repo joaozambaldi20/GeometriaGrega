@@ -2,11 +2,12 @@
 
 \usepackage {framed}
 \usepackage [top=3cm, left=3cm, bottom=2cm, right=2cm] {geometry}
+\usepackage {tikz}
 
 
 \title  {Geometria de Tales e de Pitágoras}
 \author {Eduardo Gomes \and João Zambaldi}
-\date   {31 de novembro de 2022}
+\date   {Novembro de 2022}
 
 
 \begin{document}
@@ -15,9 +16,17 @@
 
 \section {O espírito Grego} 
 
-Os gregos da antiguidade tinham um desejo de conhecer e capacidade
-para absorver todo o conhecimento das culturas que entravam em contato,
-os absorviam e construíam em cima disso. Sobre isso Platão disse \footnote{Tradução de um pequeno trecho de Epinomius 987e do inglês, talvez a tradução não seja fidedigna, ena citação que eu queria colocar originalmente está na página 9 \cite{Heath} mas parece que a referência não está correta, de qualquer forma a frase no livro é "Let us take it as an axiom that, whatever the Greeks take from the barbarian, they bring it to fuller perfection" e no livro Heath cita Epinomis 988D como fonte, o que não se verifica com a versão de Epinomis que eu encontrei}.
+Os gregos da antiguidade tinham desejo de conhecer e capacidade
+para absorver todo o conhecimento das culturas que entravam em contato.
+Uma vez que dominavam a área, logo construíam em cima disso. 
+Sobre isso Platão disse \footnote{Tradução de um pequeno trecho de 
+Epinomius 987e do inglês, talvez a tradução não seja fidedigna, a 
+citação que eu queria colocar originalmente está na página 9 de \cite{Heath} mas 
+parece que a referência não está correta, de qualquer forma a frase no
+livro é "Let us take it as an axiom that, whatever the Greeks take 
+from the barbarian, they bring it to fuller perfection" e no livro 
+Heath cita Epinomis 988D como fonte, o que não se verifica com a 
+versão de Epinomis que eu encontrei}.
 
 \begin{framed}
 	Sempre que gregos aprendem algo dos bárbaros, isso é 
@@ -34,13 +43,13 @@ matemático da história.
 \section {Tales de Mileto}
 
 A tradição têm que Tales de Mileto (624, 548 antes de Cristo) foi o primeiro
-matemático e primeiro filosofo, foi Tales a primeira pessoa a provar um teorema,
-de fato, a ele são atribuídos em particular os seguintes resultados\footnote{
+matemático e primeiro filosofo. Foi Tales a primeira pessoa a provar um teorema.
+De fato, a ele são atribuídos em particular os seguintes resultados\footnote{
 Página 130 de \cite{Heath}, uma lista similar, diferindo apenas no quinto resultado
 é encontrada no capítulo 4 de \cite{Boyer}}
 \begin{enumerate}
 	\item um círculo é dividido pelo seu diâmetro
-	\item os ângulos da base de um triângulo equilátero são congruentes
+	\item os ângulos da base de um triângulo isósceles são congruentes
 	\item ângulos opostos pelo vértice são congruentes
 	\item se dois triângulos são tais que dois ângulos e uma lado de um deles são
 		congruentes respectivamente a dois ângulos e um lado de outro, então
@@ -50,15 +59,15 @@ Página 130 de \cite{Heath}, uma lista similar, diferindo apenas no quinto resul
 \end{enumerate}
 
 Existem algumas histórias notáveis em que Tales faz as uso da geometria
-das formas mais elegantes possíveis 
+das formas mais elegantes possíveis. Duas delas são:
 \begin{enumerate}
 	\item mediu a altura de uma pirâmide usando sua sombra - novamente 
-		citando \cite{Heath}, existe várias versões desta história
+		citando \cite{Heath}, existem várias versões desta história
 		a mais simples delas é que Tales percebeu que em um momento
 		do dia, a sombra de uma pessoa era igual sua altura, e inferiu
 		que a sombra da pirâmide teria também o mesmo comprimento que
 		a altura da pirâmide
-	\item mediu a distância de uma embarcação eté a praia usando a semelhança
+	\item mediu a distância de uma embarcação até a praia usando semelhança
 		entre dois triângulos retângulos
 \end{enumerate}
 
@@ -67,10 +76,9 @@ das formas mais elegantes possíveis
 
 O aluno mais notável de Tales foi Pitágoras, como conta Heath na página 4 de \cite{Heath}, a tradição tem que Tales admirado com as habilidades de Pitágoras lhe contou tudo
 que sabia e como na época já tinha idade avançada o aconselhou que viajasse ao
-Egito para aprender com os sacerdotes. Essa história é bastante controversa,
-no já citado capítulo 4 de \cite{Boyer}, Boyer diz que isso é improvável. Mas 
-de fato faz parte da tradição.
-
+Egito para aprender com os sacerdotes. Essa história é bastante controversa, e
+Boyer diz que isso é improvável\footnote{No capítulo 4 de \cite{Boyer}.}. Mas 
+é parte importante da tradição.
 Pitágoras foi o mestre da \emph{Escola Pitagórica}. Era comum na antiguidade
 dar todo o mérito de uma escola ao mestre, e isso é o que aconteceu. Para os
 \emph{Pitagóricos},
@@ -81,22 +89,152 @@ dar todo o mérito de uma escola ao mestre, e isso é o que aconteceu. Para os
 \end{framed}
 \end{center}
 
-Quando ouvimos isso, não é muito claro o que isso significa, alguns exemplos
-fazem esse conceito mais fácil, por exemplo, eles consideravam que os números 
-tinham gêneros: os números pares eram femininos e os ímpares eram femininos
-de modo que o número $1$ não tinha gênero, o número $5$ era o número do casamento
-pois $2 + 3 = 5$, simbolizando a união do primeiro número feminino com o 
-primeiro número masculino. O número dez era o número do universo, pois 
-$1$ representa o ponto, $2$ pontos distintos determinam uma reta, $3$ pontos 
-distintos e não colineares determinam uma reta e $4$ pontos não coplanares 
-determinam um tetraedro e $1 + 2 + 3 + 4 = 10$.
+Quando ouvimos isso, não é muito claro o que significa, alguns exemplos
+fazem esse conceito, com alguns exemplos fica mais claro. Eles consideravam que os números 
+tinham gêneros: os números pares eram femininos e os ímpares, excetuando o número
+$1$, eram masculinos, 
+o número $5$ era o número do casamento pois $2 + 3 = 5$, 
+simbolizando a união do primeiro número feminino $2$ com o 
+primeiro número masculino $3$. 
+O número dez era o número do universo, pois 
+$1$ representa a dimensão do ponto, 
+$2$ representa a dimensão da reta, pois dois pontos distintos determinam uma reta, 
+$3$ representa a dimensão do plano, pois três pontos distintos e não colineares determinam um plano e 
+$4$ a dimensão do espaço, pois quatro pontos não coplanares determinam um tetraedro.
+Assim, 10 que inclui todas as dimensões geométricas, $1 + 2 + 3 + 4 = 10$, 
+é o número do universo.
 
-A teoria dos números foi originada na escola pitagórica, a definição de paridade
-dos pitagóricos também era um pouco diferente, os números pares eram classificados
-como ímpares 
+A teoria dos números foi originada na escola pitagórica, eles conheciam
+os números triangulares, retangulares, números perfeitos e números amigáveis.
+
+Na geometria os seguintes resultados são atribuidos a escola Pitagórica
+\begin{enumerate}
+	\item a soma dos ângulos de um triângulo é de dois ângulos retos
+	\item o teorema de Pitágoras
+	\item os incomenssuráveis
+	\item os cinco sólidos regulares
+\end{enumerate}
+
+Acreditas-se que a prova de que a soma dos ângulos internos de um triângulo
+é de 180 graus se deu por traçar uma reta paralela a um lado de um triângulo
+passando pelo vértice que não está nesse lado,
+
+\begin{center}
+\begin{tikzpicture}
+	\draw 
+	(0, 0) node[anchor=north]{B} -- 
+	(5, 0) node[anchor=north]{C} -- 
+	(2.5, 4.33) node[anchor=south]{A} -- 
+	cycle;
+	\draw (0, 4.33)  node[anchor=south]{D} -- (5, 4.33)  node[anchor=south]{E};
+\end{tikzpicture}
+\end{center}
+E usando que $DE$ é paralela a $AB$, temos que os ângulos $D \widehat A B$ 
+e $A \widehat BC$ são alternos internos. Da mesma forma $E \widehat A C$ e 
+$A \widehat C B$ são congruentes. E a soma $D \widehat AB$ $B \widehat AC$ e
+$E \widehat AC$ é igual a soma de $B \widehat A C$, $A \widehat BC$ e $B \widehat C A$.
+
+
+Sobre o \emph{Teorema de Pitágoras} algumas fontes dizem que Pitágoras 
+teria sacrificado um gado (em outros relatos 100 gados) em gratidão aos
+deuses pela descoberta. As regras da escolas Pitagórica não permitiam
+sacrifícios dessa forma e isto é geralmente tido em descredito. Algumas 
+fontes citam que o suposto sacrifício teria sido em virtude da descoberta
+do triângulo de lados $3, 4, 5$ mas esse triângulo já era conhecido
+no Egito e é mais provável que tenha vindo de lá para a Grécia. Ainda 
+existem linhas que dizem que o teorema já tenha sido enunciado antes de 
+Pitágoras mas foi ele que demonstrou.
+
+Existem algumas linhas de qual demonstração Pitágoras apresentou para o Teorema, 
+a primeira é de que a prova foi por decompor os quadrados em partes retangulares e
+estas partes retangulares em triângulos como foi feito no livro de Euclides.
+
+
+\begin{center}
+\begin{tikzpicture}
+	\draw (0, 0) -- (5, 0) -- (1.8, 2.4) -- cycle;
+	\draw (0, 0) -- (0, -5) -- (5, -5) -- (5, 0);
+	\draw (1.8, 2.4) -- (-0.6, 4.2) -- (-2.4, 1.8) -- (0,0);
+	\draw (1.8, 2.4) -- (4.2, 5.6) -- (7.4, 3.2) -- (5, 0);
+	\draw (1.8, 2.4) -- (1.8, -5);
+	\draw (1.8, 2.4) -- (0, -5);
+	\draw (1.8, 2.4) -- (5, -5);
+	\draw (0, 0) -- (7.4, 3.2);
+	\draw (5, 0) -- (-2.4, 1.8);
+\end{tikzpicture}
+\end{center}
+
+No entanto, a ideia mais aceita é a de que Pitágoras tenha usado raciocínio
+como das figuras abaixo.
+
+\begin{center}
+\begin{tikzpicture}
+	\draw (0, 0) -- (5, 0) -- (5, 5) -- (0, 5) -- cycle;
+	\draw (4, 0) -- (4, 5);
+	\draw (0, 4) -- (5, 4);
+	\draw (9, 0) -- (14, 0) -- (14, 5) -- (9, 5) -- cycle;
+	\draw (10, 0) -- (9, 4);
+	\draw (9, 4) -- (13, 5);
+	\draw (13, 5) -- (14, 1);
+	\draw (14, 1) -- (10, 0);
+\end{tikzpicture}
+\end{center}
+
+O raciocínio algébrico de hoje nos permite facilmente mostrar usando
+das fórmulas da área de triângulos, retângulos a partir dessa
+figura que o teorema de Pitágoras vale, no entanto não foi assim
+que se imagina que a demonstração tenha sido feita.
+
+
+\section{A relação entre o trabalho de Pitágoras e o trabalho de Tales}
+
+Pitágoras e Tales atuaram nas mesmas áreas, em especial: filosofia, geometria e
+astronomia. 
+
+Uma interessante conexão entre o trabalho dos dois matemáticos é a soma de que
+os ângulos internos de um triângulo é $180^\circ$. Especula-se que se Tales 
+realmente mostrou que o triângulo inscrito em um semicírculo é retângulo ele
+já estaria em posição para mostrar que a soma dos ângulos internos de um triângulo
+é de $180^\circ$. Usando o fato de que a soma dos ângulos agudos de um 
+triângulo retângulo é de $90^\circ$, para decompor um triângulo qualquer em dois
+triângulos retângulos e então provar que a soma dos ângulos deste triângulo é
+também de $180^\circ$.
+
+E para finalizar, eu quero falar sobre duas passagens do comentário de \emph{Proclo}
+sobre os \emph{Elementos de Euclides} que
+Heath cita \cite{Heath} que eu acho que esclarecem como as contribuições\footnote{
+Infelizmente não consegui uma tradução para o português dessas e
+fiz um tradução diretamente do livro de Heath \cite{Heath}, do inglês, a
+sobre Tales está na página 128 e a sobre Pitágoras na página 141}
+de Tales e Pitágoras formam a base da geometria grega. A primeira é sobre
+Tales
+
+\begin{framed}
+	[...] primeiro foi ao Egito e depois introduziu seus estudos 
+	a Grécia. Ele descobriu numerosas proposições próprias e 
+	instruiu seus sucessores nos seus métodos de ataque sendo em
+	alguns casos mais geral e em outros mais empírico, no sentido
+	de simples inspecção ou observação
+\end{framed}
+
+e a segunda é sobre Pitágoras
+
+\begin{framed}
+	Depois desses [Tales e Ameristus] Pitágoras transformou o estudo
+	da geometria em uma educação liberal examinando a ciência dos 
+	princípios e provando os teoremas de forma imaterial e intelectual ;
+	foi ele quem descobriu a teoria das proporções e a construções das 
+	figuras cósmicas 
+\end{framed}
+
+Ou seja, além dos incríveis teoremas que eles provaram, Tales e Pitágoras
+transformaram a geometria que nasceu no Egito para resolver problemas cotidianos
+baseada muito na intuição e no raciocínio prático em uma ciência de fato,
+baseada no raciocínio lógico dedutivo que conhecemos hoje,
+esse trajeto já tinha sido iniciado no Egito e na Índia mas eles levaram isso 
+muito além do que se tem notícia.
 
 \bibliography{refs}
 \bibliographystyle{plain}
 
 \end{document}
-
